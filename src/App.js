@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import "./App.scss";
 import { Notification, Section } from 'rbx';
-  
+import RoutesScreen from './routes';
+
 const App = () => (
   <div>
-    <Section>
-      <Notification color="success">
-        Javascript Notes!
-      </Notification>
-    </Section>
+    <Fragment>
+      <RoutesScreen />
+    </Fragment>
   </div>
 )
-  
+
 export default App;
