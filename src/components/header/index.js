@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Container, Column, Button } from 'rbx'
+import { Navbar, Container, Column } from 'rbx'
 import LogoImage from '../../assets/images/logo.png'
 import '../../styles/header.scss'
 import { Link } from "react-router-dom";
@@ -28,10 +28,10 @@ function Header() {
                     <Navbar.Segment as="div" className="navbar-item navbar-end" align="right">
                         <Column.Group>
                             <Column>
-                                <Button to="/register" className="button is-white">Register</Button>
+                                <Link to="/register" className="button is-white">Register</Link>
                             </Column>
                             <Column>
-                                <Button to="/login" className="button is-outlined" color={"black"}>Login</Button>
+                                <Link to="/login" className="button is-outlined is-black">Login</Link>
                             </Column>
                         </Column.Group>
                     </Navbar.Segment>

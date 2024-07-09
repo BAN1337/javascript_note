@@ -1,5 +1,5 @@
 {
-  "name": "javascript_note2",
+  "name": "javascript_note",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,7 @@
     "axios": "^0.19.2",
     "bulma": "^0.8.2",
     "moment": "^2.24.0",
-    "node-sass": "^9.0.0",
+    "node-sass": "^7.0.3",
     "rbx": "^2.2.0",
     "react": "^18.3.1",
     "react-burger-menu": "^3.0.9",
