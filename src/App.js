@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import "./App.scss";
-import { Notification, Section } from 'rbx';
+import "./styles/my-bulma-project.css";
 import RoutesScreen from './routes';
 
 const App = () => (

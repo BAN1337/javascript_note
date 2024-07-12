@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Container, Column } from 'rbx'
-import LogoImage from '../../assets/images/logo.png'
+import logoImage from '../../assets/images/logo.png'
 import '../../styles/header.scss'
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function Header() {
             <Container>
                 <Navbar.Brand>
                     <Link to='/'>
-                        <img src={LogoImage} />
+                        <img src={logoImage} />
                     </Link>
 
                     <Navbar.Burger
@@ -28,10 +28,10 @@ function Header() {
                     <Navbar.Segment as="div" className="navbar-item navbar-end" align="right">
                         <Column.Group>
                             <Column>
-                                <Link to="/register" className="button is-white">Register</Link>
+                                <Link to="/register" className="button is-white has-text-primary">Register</Link>
                             </Column>
                             <Column>
-                                <Link to="/login" className="button is-outlined is-black">Login</Link>
+                                <Link to="/login" className="button is-outlined is-primary">Login</Link>
                             </Column>
                         </Column.Group>
                     </Navbar.Segment>

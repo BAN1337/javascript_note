@@ -1,6 +1,6 @@
-@import './custom_colors';
+@import '../styles/my-bulma-project.scss';
 
 .home{
-    background-color: $custom-purple;
+    background-color: $purple;
     height: calc(100% - 70px);
 }

@@ -69,12 +69,13 @@ function RegisterForm() {
                         <Field>
                             <Control>
                                 <Column.Group breakpoint="mobile">
-                                    <Column>
-                                        <Link to='/login' className="button is-white has-text-custom-purple"
-                                        >Login or</Link>
+                                    <Column className='has-text-centered'>
+                                        <a className="button is-white has-text-primary"
+                                            onClick={e => setRedirectToLogin(true)}
+                                        >Login or</a>
                                     </Column>
-                                    <Column>
-                                        <Button color="success" outlined>Register</Button>
+                                    <Column className='has-text-centered'>
+                                        <Button color="primary" outlined>Register</Button>
                                     </Column>
                                 </Column.Group>
                             </Control>

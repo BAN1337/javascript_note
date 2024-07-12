@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
-import { Button, Field, Control, Input, Column, Section, Help, Label } from "rbx";
+import { Button, Field, Control, Input, Column, Help, Label } from "rbx";
 import { Navigate } from "react-router-dom";
+import UsersService from '../../../services/users';
 
 function LoginForm() {
     const [email, setEmail] = useState("");
@@ -9,15 +10,26 @@ function LoginForm() {
     const [redirectToNotes, setRedirectToNotes] = useState(false);
     const [error, setError] = useState(false);
 
+    const HandleSubmit = async (evt) => {
+        evt.preventDefault()
+
+        try {
+            const user = await UsersService.login({ email: email, password: password })
+            setRedirectToNotes(true)
+        } catch (error) {
+            setError(true)
+        }
+    }
+
     if (redirectToRegister)
-        return <Navigate to={{ pathname: "/register" }} />
+        return <Navigate to="/register" />
     else if (redirectToNotes)
-        return <Navigate to={{ pathname: "/notes" }} />
+        return <Navigate to="/notes" />
 
     return (
         <Fragment>
             <Column.Group centered>
-                <form>
+                <form onSubmit={HandleSubmit}>
                     <Column size={12}>
                         <Field>
                             <Label size="small">Email:</Label>
@@ -46,13 +58,13 @@ function LoginForm() {
                         <Field>
                             <Control>
                                 <Column.Group breakpoint="mobile">
-                                    <Column>
-                                        <a className="button is-white has-text-custom-purple"
+                                    <Column className='has-text-centered'>
+                                        <a className="button is-white has-text-primary"
                                             onClick={e => setRedirectToRegister(true)}
                                         >Register or</a>
                                     </Column>
-                                    <Column>
-                                        <Button color="success" outlined>Login</Button>
+                                    <Column className='has-text-centered'>
+                                        <Button color="primary" outlined>Login</Button>
                                     </Column>
                                 </Column.Group>
                             </Control>

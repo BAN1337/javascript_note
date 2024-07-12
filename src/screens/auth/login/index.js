@@ -11,11 +11,11 @@ const LoginScreen = () => (
         <Section size="medium" className="auth">
             <Container>
                 <Column.Group centered>
-                    <Column size={3}>
+                    <Column size={5}>
                         <Card>
                             <Card.Content>
                                 <Section>
-                                    <Column.Group centered>
+                                    <Column.Group className='has-text-centered'>
                                         <Column size={12}>
                                             <img src={logoImage} />
                                         </Column>

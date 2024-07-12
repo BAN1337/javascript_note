@@ -7,7 +7,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^0.19.2",
-    "bulma": "^0.8.2",
+    "bulma": "^1.0.1",
     "moment": "^2.24.0",
     "node-sass": "^7.0.3",
     "rbx": "^2.2.0",
@@ -17,13 +17,15 @@
     "react-quill": "^1.3.5",
     "react-router-dom": "^6.24.1",
     "react-scripts": "^5.0.1",
+    "sass": "^1.77.8",
     "web-vitals": "^4.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start & npm run build-bulma -- --watch",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-bulma": "sass --load-path=node_modules ./src/styles/my-bulma-project.scss ./src/styles/my-bulma-project.css"
   },
   "eslintConfig": {
     "extends": [

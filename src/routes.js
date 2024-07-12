@@ -6,14 +6,52 @@ import LoginScreen from "./screens/auth/login";
 import NotesScreen from "./screens/notes/index";
 import UsersEditScreen from "./screens/users/edit";
 
+import PrivateRoute from "./components/auth/private_router";
+import PublicRoute from "./components/auth/public_router";
+
 const RoutesScreen = () => (
     <BrowserRouter>
         <Routes>
-            <Route exact path="/" element={<HomeScreen />} />
-            <Route exact path="/register" element={<RegisterScreen />} />
-            <Route exact path="/login" element={<LoginScreen />} />
-            <Route exact path="/notes" element={<NotesScreen />} />
-            <Route exact path="/users/edit" element={<UsersEditScreen />} />
+            <Route
+                exact path="/"
+                element={
+                    <PublicRoute>
+                        <HomeScreen />
+                    </PublicRoute>
+                }
+            />
+            <Route
+                exact path="/register"
+                element={
+                    <PublicRoute>
+                        <RegisterScreen />
+                    </PublicRoute>
+                }
+            />
+            <Route
+                exact path="/login"
+                element={
+                    <PublicRoute>
+                        <LoginScreen />
+                    </PublicRoute>
+                }
+            />
+            <Route
+                exact path="/notes"
+                element={
+                    <PrivateRoute>
+                        <NotesScreen />
+                    </PrivateRoute>
+                }
+            />
+            <Route
+                exact path="/users/edit"
+                element={
+                    <PrivateRoute>
+                        <UsersEditScreen />
+                    </PrivateRoute>
+                }
+            />
         </Routes>
     </BrowserRouter>
 )
