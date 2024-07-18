@@ -29,6 +29,17 @@ function HeaderLogged(props) {
                         </Link>
                     </Column>
                 </Column.Group>
+                <Navbar.Segment as="div" className="navbar-item navbar-start" align="start">
+                    <Navbar.Item as="div">
+                        <Button
+                            className="open-button"
+                            color="white"
+                            outlined
+                            onClick={() => props.verifyIsOpen()}>
+                            <FontAwesomeIcon icon={faList} />
+                        </Button>
+                    </Navbar.Item>
+                </Navbar.Segment>
                 <Navbar.Burger
                     className="navbar-burger burger"
                     aria-label="menu"
@@ -46,7 +57,7 @@ function HeaderLogged(props) {
                         <Dropdown>
                             <Dropdown.Trigger>
                                 <Button outlined color='white'>
-                                    <span>Leonardo ▼</span>
+                                    <span>{JSON.parse(localStorage.getItem('user')).name} ▼</span>
                                 </Button>
                             </Dropdown.Trigger>
                             <Dropdown.Menu>

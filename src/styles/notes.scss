@@ -1,0 +1,23 @@
+@import '../styles/my-bulma-project.scss';
+
+.notes{
+    height: calc(100% - 70px);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    .list-item.is-active{
+        background-color: $custom-gray-light;
+        padding: 10px;
+    }
+    .list-item{
+        background-color: $custom-gray;
+        padding: 10px;
+        border-bottom: $custom-gray-light 2px solid;
+    }
+}
+
+.bm-menu{
+    background: white;
+    padding-top: 10px;
+}
+
