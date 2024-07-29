@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
-import HeaderUserEdit from "../../../components/header_user_edit";
+import HeaderUserEdit from "../../../../components/header_user_edit";
 import { Column, Section, Title, Container, Card } from 'rbx'
-import logoImage from '../../../assets/images/logo-white.png'
-import '../../../styles/user-edit.scss'
-import UsersEditForm from "../../../components/users/edit_form";
+import logoImage from '../../../../assets/images/logo-white.png'
+import '../../../../styles/user-edit.scss'
+import UsersEditEmailForm from "../../../../components/users/editemail_form";
 
-const UsersEditScreen = () => (
+const UserEditEmailScreen = () => (
     <Fragment>
         <HeaderUserEdit />
         <Section size="medium" className="user-edit">
@@ -21,14 +21,14 @@ const UsersEditScreen = () => (
                                         </Column>
                                     </Column.Group>
 
-                                    <Column.Group>
+                                    <Column.Group className='is-flex is-vcentered has-text-centered'>
                                         <Column size={12}>
-                                            <Title size={6} className="has-text-white has-text-centered">
-                                                Edit your name, email and password
+                                            <Title size={6} className="has-text-white">
+                                                Edit your email
                                             </Title>
                                         </Column>
                                     </Column.Group>
-                                    <UsersEditForm />
+                                    <UsersEditEmailForm />
                                 </Section>
                             </Card.Content>
                         </Card>
@@ -39,4 +39,4 @@ const UsersEditScreen = () => (
     </Fragment>
 )
 
-export default UsersEditScreen
+export default UserEditEmailScreen

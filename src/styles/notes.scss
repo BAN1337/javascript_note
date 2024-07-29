@@ -5,10 +5,12 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
+    
     .list-item.is-active{
         background-color: $custom-gray-light;
         padding: 10px;
     }
+
     .list-item{
         background-color: $custom-gray;
         padding: 10px;
@@ -21,3 +23,11 @@
     padding-top: 10px;
 }
 
+.notes-editor{
+    padding: 0;
+    height: calc(100% - 43px);
+  
+    .quill{
+        height: 100%;
+    }
+}

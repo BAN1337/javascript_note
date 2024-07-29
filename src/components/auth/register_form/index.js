@@ -22,7 +22,7 @@ function RegisterForm() {
         }
     }
 
-    if (redirectToLogin === true)
+    if (redirectToLogin)
         return <Navigate to="/login" />
 
     return (
