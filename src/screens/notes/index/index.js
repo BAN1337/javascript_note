@@ -1,8 +1,13 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import HeaderLogged from "../../../components/header_logged";
 import Notes from "../../../components/notes";
 
 const NotesScreen = () => {
+
+    useEffect(() => {
+        document.title = 'Notes';
+    }, []);
+
     const [isOpen, setIsOpen] = useState(false)
 
     function verifyIsOpen() {
